@@ -55,7 +55,7 @@ The product is a browser-based simulation and demonstration. It is not intended 
 3. The speed range is `0-300 km/h`; overspeed begins at `130 km/h`.
 4. Low and critical battery thresholds are `20%` and `8%` respectively.
 5. Charging is permitted only while the vehicle is stopped and ignition is off.
-6. Arrow keys and `WASD` support driving; `E` toggles ignition and `C` toggles charging.
+6. Arrow keys and `ZQSD` support driving; `E` toggles ignition and `C` toggles charging.
 7. On-screen controls provide functional parity for touch and pointer users.
 8. Network-dependent maps and routes enhance the GPS but never block the vehicle simulation.
 9. English is the baseline presentation language; localization is an extension.
@@ -115,9 +115,9 @@ The interface supports three operating widths:
 
 | Key | Action | Interaction mode | Preconditions |
 | --- | --- | --- | --- |
-| `ArrowUp` or `W` | Accelerate | Hold | Ignition on, battery above `0%`, not charging |
+| `ArrowUp` or `Z` | Accelerate | Hold | Ignition on, battery above `0%`, not charging |
 | `ArrowDown` or `S` | Brake | Hold | None |
-| `ArrowLeft` or `A` | Steer left | Hold | Vehicle moving |
+| `ArrowLeft` or `Q` | Steer left | Hold | Vehicle moving |
 | `ArrowRight` or `D` | Steer right | Hold | Vehicle moving |
 | `E` | Toggle ignition | Press once | Starting requires battery above `0%` |
 | `C` | Toggle charging | Press once | Ignition off and vehicle stopped |
@@ -208,7 +208,7 @@ State invariants:
 | REQ-005 | The application shall brake continuously while a braking command is held. | Time-based state test. |
 | REQ-006 | The application shall apply drag when no longitudinal command is active. | Time-based state test. |
 | REQ-007 | The application shall steer and update heading only while the vehicle is moving. | State and navigation test. |
-| REQ-008 | The application shall support arrow keys and `WASD` alternatives from one command definition. | Mapping consistency test. |
+| REQ-008 | The application shall support arrow keys and `ZQSD` alternatives from one command definition. | Mapping consistency test. |
 | REQ-009 | The application shall clear held commands on key release, focus loss, and page visibility loss. | Controller test. |
 | REQ-010 | The application shall expose on-screen controls equivalent to all keyboard commands. | Browser interaction test. |
 | REQ-011 | The application shall display battery percentage and estimated range. | Component test. |
@@ -250,7 +250,7 @@ State invariants:
 | AC-002 | Start and accelerate | Battery is above `0%` and ignition is off | The user presses `E`, then holds acceleration | Ignition starts, charging is off, speed rises smoothly, and affected displays update within `100 ms` | REQ-003, REQ-004, REQ-024, REQ-026 |
 | AC-003 | Brake and coast | The vehicle is moving | The user brakes and later releases all longitudinal controls | Speed falls under braking, continues falling under drag, and never becomes negative | REQ-005, REQ-006, REQ-022 |
 | AC-004 | Steering and GPS | The vehicle is moving | The user holds left or right steering | Heading and subsequent position change consistently while coordinates remain valid | REQ-007, REQ-019 |
-| AC-005 | Keyboard alternatives | The dashboard has focus | The user drives once with arrows and once with `WASD` | Equivalent actions produce equivalent state changes and press actions do not repeat from key repeat | REQ-008, REQ-009 |
+| AC-005 | Keyboard alternatives | The dashboard has focus | The user drives once with arrows and once with `ZQSD` | Equivalent actions produce equivalent state changes and press actions do not repeat from key repeat | REQ-008, REQ-009 |
 | AC-006 | Touch parity | The application is used on a pointer or touch device | The user operates each visible control | Every keyboard action has an operable equivalent and no control becomes stuck | REQ-010, REQ-030 |
 | AC-007 | Battery lifecycle | Ignition is on | Simulated time advances under idle and acceleration | Battery drains by elapsed time, range follows charge, and battery remains bounded | REQ-011, REQ-012, REQ-014 |
 | AC-008 | Charging guard | The vehicle is moving or ignition is on | The user requests charging | Charging is rejected and state remains valid; once stopped with ignition off, charging can begin | REQ-013, REQ-022 |

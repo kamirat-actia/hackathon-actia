@@ -18,7 +18,7 @@ Use this skill when asked to:
 - add, remove, remap, or review a keyboard shortcut;
 - implement acceleration, braking, steering, ignition, charging, or another command;
 - diagnose repeated toggles, stuck keys, browser scrolling, or pointer cancellation;
-- verify `WASD` and arrow-key parity;
+- verify `ZQSD` and arrow-key parity;
 - validate command conflicts or documentation drift;
 - generate on-screen controls from keyboard metadata.
 
@@ -131,7 +131,7 @@ npm test
 
 Then verify in a browser:
 
-1. Arrow and `WASD` alternatives.
+1. Arrow and `ZQSD` alternatives.
 2. Rapid and held `E`/`C` presses.
 3. Simultaneous keyboard and pointer use.
 4. Focus loss during acceleration.

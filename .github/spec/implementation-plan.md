@@ -172,7 +172,7 @@ Phases 2 and 3.
 
 ### Validation Criteria
 
-- Arrow and `WASD` alternatives produce equivalent intent.
+- Arrow and `ZQSD` alternatives produce equivalent intent.
 - Press commands ignore native key repeat.
 - Hold commands clear on release, blur, and visibility change.
 - Pointer cancellation cannot leave a command active.

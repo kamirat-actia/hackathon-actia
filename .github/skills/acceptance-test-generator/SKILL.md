@@ -152,7 +152,7 @@ Record browser name/version, viewport, network state, permission state, and resu
 | Speed | Start, accelerate, brake, coast, min/max clamp, finite display |
 | Battery | Drain, accelerated drain, valid charge guard, full clamp, empty shutdown |
 | Warnings | Each threshold, priority, exactly-once raise/clear, non-color cue |
-| Commands | Arrow/WASD parity, repeat suppression, release, blur, visibility, pointer cancel |
+| Commands | Arrow/ZQSD parity, repeat suppression, release, blur, visibility, pointer cancel |
 | GPS | Valid default, heading/movement, denied location, offline map, failed/stale route |
 | State | Invalid transition preservation and immutable snapshots |
 | Layout | Three target viewports, `200%` zoom, long messages, extreme values |

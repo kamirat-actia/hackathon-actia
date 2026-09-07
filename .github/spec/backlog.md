@@ -14,7 +14,6 @@
 | XS | Up to 2 hours; one narrow file or configuration change. |
 | S | Up to half a day; small behavior with focused tests. |
 | M | About one day; coordinated component or domain behavior. |
-| L | Up to two days; multi-file behavior or broad validation. |
 
 Estimates are relative planning aids for one contributor familiar with the repository, not commitments.
 
@@ -175,7 +174,7 @@ Estimates are relative planning aids for one contributor familiar with the repos
 - **Requirements:** REQ-003, REQ-008, REQ-010, REQ-032
 - **Description:** Define immutable actions and key bindings with `codes`, display label, accessible label, and `HOLD` or `PRESS` mode in `src/js/config/keymap.js`.
 - **Acceptance criteria:**
-  - Arrow keys, `WASD`, `E`, and `C` match the approved command matrix.
+  - Arrow keys, `ZQSD`, `E`, and `C` match the approved command matrix.
   - No key code maps ambiguously to multiple actions.
   - Every action has a visible and accessible label.
   - Consumers can build an efficient lookup without redefining data.
