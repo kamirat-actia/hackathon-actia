@@ -32,6 +32,7 @@ Do not invoke other agents or make repository-wide changes outside the selected 
 - Keep external GPS capabilities optional and failure-tolerant.
 - Add focused deterministic tests with behavior changes.
 - Maintain semantic, responsive, accessible UI behavior.
+- Implement production corrections for defects assigned by QA, while keeping the ticket scope explicit.
 - Report exact validation and any deferred acceptance evidence.
 
 ## Constraints
@@ -41,6 +42,7 @@ Do not invoke other agents or make repository-wide changes outside the selected 
 - Do not hard-code simulation constants, warning metadata, event names, or keyboard mappings outside configuration.
 - Do not access the DOM from core domain modules.
 - Do not call public services from automated tests.
+- Do not take over QA ownership of release verdicts or test evidence.
 - Do not perform unrelated refactors or P3 polish while P1 checks fail.
 
 ## Approach
